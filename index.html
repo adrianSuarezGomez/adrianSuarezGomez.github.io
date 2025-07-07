@@ -46,6 +46,60 @@
       nav { flex-direction: column; gap: 0.7rem; padding: 1.2rem 0 0.7rem 0; }
       .nav-links { gap: 1.2rem; }
       .lang-switcher { margin-left: 0; }
+      .hero { flex-direction: column; gap: 2rem; padding: 2.5rem 0; }
+      .about { flex-direction: column; gap: 2rem; padding: 2.5rem 0; }
+      .services { padding-left: 0.5rem; }
+      .stats { gap: 1.5rem; }
+      .hero-image { width: 220px; height: 250px; margin: 0 auto; }
+    }
+    @media (max-width: 600px) {
+      .container { padding: 0 0.5rem; }
+      header { padding: 0.5rem 0; }
+      nav { padding: 0.7rem 0 0.5rem 0; }
+      .nav-links { gap: 0.7rem; font-size: 0.98rem; }
+      .hero { flex-direction: column; align-items: flex-start; gap: 1.5rem; padding: 1.2rem 0; }
+      .hero-content h1 { font-size: 2rem; margin-bottom: 1rem; }
+      .hero-image { width: 140px; height: 160px; min-width: 120px; min-height: 140px; }
+      .skills { flex-wrap: wrap; gap: 0.7rem; font-size: 0.95rem; padding: 0.5rem 0; }
+      .about { flex-direction: column; gap: 1.2rem; padding: 1.2rem 0; }
+      .about-text h2 { font-size: 1.3rem; }
+      .about-text p { font-size: 0.98rem; }
+      .services { gap: 1rem; padding-left: 0.2rem; }
+      .service-item { gap: 0.5rem; }
+      .service-item svg { width: 24px; height: 24px; }
+      .stats { flex-direction: column; gap: 0.7rem; align-items: flex-start; }
+      .stat span { font-size: 1.3rem; }
+      .projects { padding: 1.2rem 0; }
+      .projects h2 { font-size: 1.5rem; margin-bottom: 1rem; }
+      .project-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .card img { height: 120px; }
+      .card-content h3 { font-size: 1.05rem; }
+      .card-content p { font-size: 0.95rem; }
+      .contact { padding: 1.2rem 0; }
+      .contact h2 { font-size: 1.3rem; }
+      .contact p { font-size: 0.98rem; }
+      .social-links { gap: 1rem; }
+      .social-links svg { width: 20px; height: 20px; }
+      .contact-email a { font-size: 0.98rem; }
+      footer.container { padding: 1rem 0; font-size: 0.95rem; }
+      /* HEADER FIJO EN MÓVIL */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background: #0d1117;
+        z-index: 1000;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      }
+      .hero {
+        padding-top: 80px; /* Altura aproximada del header fijo */
+      }
+    }
+    @media (max-width: 400px) {
+      .hero-content h1 { font-size: 1.2rem; }
+      .about-text h2, .projects h2, .contact h2 { font-size: 1rem; }
+      .card-content h3 { font-size: 0.95rem; }
     }
     nav a:hover { color: #ff6b4a; }
     .hero { display: flex; align-items: center; justify-content: space-between; padding: 4rem 0; }
@@ -221,7 +275,7 @@
         <div class="stat"><span>50+</span>
           <p>Proyectos</p>
         </div>
-        <div class="stat"><span>7+</span>
+        <div class="stat"><span>9+</span>
           <p>Años de experiencia</p>
         </div>
         <div class="stat"><span>100%</span>
@@ -260,7 +314,14 @@
               <p>Creación de una libreria comun para automatizacion de pruebas para evitar duplicacion de codigo.</p>
               <!--<a href="https://github.com/adriansuarezg/Appium-Mobile-Testing">Ver detalles</a>-->
           </div>
-      </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+              <h3>Performance Testing con Playwright</h3>
+              <p>Creacion de bateria de pruebas de performance con Playwright.</p>
+              <!--<a href="https://github.com/adriansuarezg/Appium-Mobile-Testing">Ver detalles</a>-->
+          </div>
+        </div>
     </div>
 </section>
 <section id="contacts" class="contact container">
