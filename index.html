@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="es" class="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Adrián Suárez Gómez — QA Automation Engineer. E2E, API, móvil y performance testing con Playwright, Cypress, Selenium, Appium y más.">
+  <meta name="description"
+    content="Adrián Suárez Gómez — QA Automation Engineer especializado en AI-Powered Testing. Automatización inteligente con LLM, self-healing, E2E, API y móvil con Playwright, Cypress, Selenium y más.">
   <meta name="robots" content="index,follow">
   <title>Adrián Suárez Gómez - QA Automation Engineer</title>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -13,7 +15,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="canonical" href="https://adriansuarezgomez.github.io/">
   <meta property="og:title" content="Adrián Suárez Gómez - QA Automation Engineer">
-  <meta property="og:description" content="Pruebas E2E, API, móvil y performance. Automatización robusta con herramientas modernas.">
+  <meta property="og:description"
+    content="Pruebas E2E, API, móvil y performance. Automatización robusta con herramientas modernas.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://adriansuarezgomez.github.io/">
   <meta property="og:image" content="https://adriansuarezgomez.github.io/social-card.svg">
@@ -22,10 +25,60 @@
   <meta name="twitter:description" content="Automatización de pruebas con Playwright, Cypress, Selenium, Appium y más.">
   <meta name="twitter:image" content="https://adriansuarezgomez.github.io/social-card.svg">
   <style>
-    html { scroll-behavior: smooth; }
-    @keyframes float-y { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
-    .float-slow { animation: float-y 6s ease-in-out infinite; }
-    /* Animación de borde desactivada según preferencia */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @keyframes float-y {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+
+    .float-slow {
+      animation: float-y 6s ease-in-out infinite;
+    }
+
+    @keyframes border-glow {
+
+      0%,
+      100% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+
+    .ai-card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 0.75rem;
+      overflow: hidden;
+    }
+
+    .ai-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      padding: 1px;
+      border-radius: 0.75rem;
+      background: linear-gradient(90deg, rgba(255, 107, 74, 0.1), rgba(255, 107, 74, 0.6), rgba(255, 163, 127, 0.6), rgba(255, 107, 74, 0.1));
+      background-size: 200% 200%;
+      animation: border-glow 4s ease infinite;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
   </style>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -57,42 +110,61 @@
     }
   </script>
 </head>
+
 <body class="bg-zinc-950 text-zinc-100 font-sans antialiased">
   <header class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-zinc-950/70 backdrop-blur">
     <div class="mx-auto max-w-7xl px-4">
       <nav class="flex h-16 items-center justify-between" aria-label="Principal">
         <a href="#" class="group inline-flex items-center gap-2">
           <span class="inline-block h-2 w-2 rounded-sm bg-brand ring-4 ring-brand/20 animate-pulse"></span>
-          <span class="text-sm font-semibold tracking-wide text-zinc-200 group-hover:text-white">Adrián Suárez Gómez</span>
+          <span class="text-sm font-semibold tracking-wide text-zinc-200 group-hover:text-white">Adrián Suárez
+            Gómez</span>
         </a>
-        <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-zinc-300 hover:text-white focus:outline-none" aria-label="Abrir menú">
+        <button id="mobileMenuBtn"
+          class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-zinc-300 hover:text-white focus:outline-none"
+          aria-label="Abrir menú">
           <i data-lucide="menu"></i>
         </button>
         <ul class="hidden items-center gap-8 md:flex">
           <li><a class="text-zinc-300 hover:text-white" href="#inicio"><span data-i18n="nav.home">Inicio</span></a></li>
-          <li><a class="text-zinc-300 hover:text-white" href="#about"><span data-i18n="nav.about">Sobre mí</span></a></li>
-          <li><a class="text-zinc-300 hover:text-white" href="#projects"><span data-i18n="nav.projects">Proyectos</span></a></li>
-          <li><a class="text-zinc-300 hover:text-white" href="#contacts"><span data-i18n="nav.contact">Contacto</span></a></li>
+          <li><a class="text-zinc-300 hover:text-white" href="#about"><span data-i18n="nav.about">Sobre mí</span></a>
+          </li>
+          <li><a class="text-zinc-300 hover:text-white" href="#projects"><span
+                data-i18n="nav.projects">Proyectos</span></a></li>
+          <li><a class="text-zinc-300 hover:text-white" href="#contacts"><span
+                data-i18n="nav.contact">Contacto</span></a></li>
         </ul>
         <div class="hidden items-center gap-3 md:flex">
-          <a href="https://www.linkedin.com/in/adrian-suarez-gomez-59b53b30/" target="_blank" rel="noopener" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-zinc-300 hover:text-white"><i data-lucide="linkedin"></i></a>
-          <a href="https://github.com/adrianSuarezGomez" target="_blank" rel="noopener" class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-zinc-300 hover:text-white"><i data-lucide="github"></i></a>
+          <a href="https://www.linkedin.com/in/adrian-suarez-gomez-59b53b30/" target="_blank" rel="noopener"
+            class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-zinc-300 hover:text-white"><i
+              data-lucide="linkedin"></i></a>
+          <a href="https://github.com/adrianSuarezGomez" target="_blank" rel="noopener"
+            class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-zinc-300 hover:text-white"><i
+              data-lucide="github"></i></a>
           <div class="ml-1 inline-flex items-center gap-1">
-            <button id="langEs" class="rounded px-2 py-1 text-xs font-semibold text-zinc-300 hover:bg-white/5" aria-label="Cambiar a Español">ES</button>
-            <button id="langEn" class="rounded px-2 py-1 text-xs font-semibold text-zinc-300 hover:bg-white/5" aria-label="Switch to English">EN</button>
+            <button id="langEs" class="rounded px-2 py-1 text-xs font-semibold text-zinc-300 hover:bg-white/5"
+              aria-label="Cambiar a Español">ES</button>
+            <button id="langEn" class="rounded px-2 py-1 text-xs font-semibold text-zinc-300 hover:bg-white/5"
+              aria-label="Switch to English">EN</button>
           </div>
         </div>
       </nav>
       <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 py-3">
         <ul class="flex flex-col gap-3">
-          <li><a class="block rounded px-2 py-2 text-zinc-300 hover:bg-white/5 hover:text-white" href="#inicio"><span data-i18n="nav.home">Inicio</span></a></li>
-          <li><a class="block rounded px-2 py-2 text-zinc-300 hover:bg-white/5 hover:text-white" href="#about"><span data-i18n="nav.about">Sobre mí</span></a></li>
-          <li><a class="block rounded px-2 py-2 text-zinc-300 hover:bg-white/5 hover:text-white" href="#projects"><span data-i18n="nav.projects">Proyectos</span></a></li>
+          <li><a class="block rounded px-2 py-2 text-zinc-300 hover:bg-white/5 hover:text-white" href="#inicio"><span
+                data-i18n="nav.home">Inicio</span></a></li>
+          <li><a class="block rounded px-2 py-2 text-zinc-300 hover:bg-white/5 hover:text-white" href="#about"><span
+                data-i18n="nav.about">Sobre mí</span></a></li>
+          <li><a class="block rounded px-2 py-2 text-zinc-300 hover:bg-white/5 hover:text-white" href="#projects"><span
+                data-i18n="nav.projects">Proyectos</span></a></li>
           <li class="flex items-center justify-between">
-            <a class="block rounded px-2 py-2 text-zinc-300 hover:bg-white/5 hover:text-white" href="#contacts"><span data-i18n="nav.contact">Contacto</span></a>
+            <a class="block rounded px-2 py-2 text-zinc-300 hover:bg-white/5 hover:text-white" href="#contacts"><span
+                data-i18n="nav.contact">Contacto</span></a>
             <div class="flex items-center gap-2">
-              <button id="langEsMobile" class="rounded px-2 py-1 text-xs font-semibold text-zinc-300 hover:bg-white/5">ES</button>
-              <button id="langEnMobile" class="rounded px-2 py-1 text-xs font-semibold text-zinc-300 hover:bg-white/5">EN</button>
+              <button id="langEsMobile"
+                class="rounded px-2 py-1 text-xs font-semibold text-zinc-300 hover:bg-white/5">ES</button>
+              <button id="langEnMobile"
+                class="rounded px-2 py-1 text-xs font-semibold text-zinc-300 hover:bg-white/5">EN</button>
             </div>
           </li>
         </ul>
@@ -102,50 +174,70 @@
 
   <main id="inicio" class="relative pt-16">
     <section class="relative min-h-[calc(100vh-64px)] flex flex-col justify-between">
-      <div class="pointer-events-none absolute inset-0 -z-10 opacity-30 [mask-image:radial-gradient(40rem_20rem_at_top,white,transparent)]">
+      <div
+        class="pointer-events-none absolute inset-0 -z-10 opacity-30 [mask-image:radial-gradient(40rem_20rem_at_top,white,transparent)]">
         <div class="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-brand/20 to-transparent blur-2xl"></div>
-    </div>
-      <div class="flex-1 flex items-center">
-        <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 py-10 md:grid-cols-2 md:py-16 lg:gap-16" data-aos="fade-up">
-        <div>
-          <p class="mb-3 inline-flex items-center gap-2 rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-xs font-semibold text-brand shadow-glow" data-i18n="hero.badge">QA Automation Engineer</p>
-          <h1 class="text-4xl font-extrabold tracking-tight md:text-5xl">
-            <span data-i18n="hero.hello">Hola. Soy</span> <span class="bg-gradient-to-r from-brand to-orange-300 bg-clip-text text-transparent">Adrián Suárez Gómez</span>
-          </h1>
-          <p class="mt-4 max-w-xl text-zinc-300" data-i18n="hero.desc">Creo estrategias y frameworks de automatización de pruebas E2E, API y móvil, enfocadas en calidad, velocidad y mantenibilidad.</p>
-          <div class="mt-6 flex flex-wrap items-center gap-3">
-            <a href="#contacts" class="inline-flex items-center gap-2 rounded-md bg-brand px-5 py-2.5 font-semibold text-zinc-950 shadow-glow hover:bg-[#e0553a]"><span data-i18n="hero.cta_contact">Contáctame</span><i data-lucide="send"></i></a>
-            <a href="#projects" class="inline-flex items-center gap-2 rounded-md border border-white/10 px-5 py-2.5 font-semibold text-zinc-200 hover:bg-white/5"><span data-i18n="hero.cta_projects">Ver proyectos</span><i data-lucide="arrow-right"></i></a>
-    </div>
-  </div>
-        <div class="relative mx-auto w-72 h-72 md:w-80 md:h-80 float-slow" data-aos="fade-up" data-aos-delay="80">
-          <svg viewBox="0 0 320 320" class="absolute inset-0 h-full w-full" role="img" aria-label="Foto de Adrián Suárez Gómez con máscara abstracta">
-            <defs>
-              <linearGradient id="heroStroke" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#ff6b4a"/>
-                <stop offset="100%" stop-color="#ffa37f"/>
-              </linearGradient>
-              <clipPath id="blobClip">
-                <path d="M73,35 C98,-4 158,-12 198,18 C242,51 272,116 261,165 C251,211 206,240 161,256 C117,271 71,274 43,242 C14,210 3,151 19,104 C34,59 51,44 73,35 Z"/>
-              </clipPath>
-              <filter id="blobShadow" x="-50%" y="-50%" width="200%" height="200%">
-                <feOffset dx="0" dy="12"/>
-                <feGaussianBlur stdDeviation="12" result="blur"/>
-                <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0.35 0"/>
-              </filter>
-            </defs>
-            <g transform="translate(20,20)">
-              <path d="M73,35 C98,-4 158,-12 198,18 C242,51 272,116 261,165 C251,211 206,240 161,256 C117,271 71,274 43,242 C14,210 3,151 19,104 C34,59 51,44 73,35 Z" fill="#000" filter="url(#blobShadow)"/>
-              <image href="./yo.png" x="0" y="0" width="280" height="280" preserveAspectRatio="xMidYMid slice" clip-path="url(#blobClip)"/>
-              <path d="M73,35 C98,-4 158,-12 198,18 C242,51 272,116 261,165 C251,211 206,240 161,256 C117,271 71,274 43,242 C14,210 3,151 19,104 C34,59 51,44 73,35 Z" fill="none" stroke="url(#heroStroke)" stroke-width="6" opacity="0.9"/>
-            </g>
-        </svg>
       </div>
+      <div class="flex-1 flex items-center">
+        <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 py-10 md:grid-cols-2 md:py-16 lg:gap-16"
+          data-aos="fade-up">
+          <div>
+            <p class="mb-3 inline-flex items-center gap-2 rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-xs font-semibold text-brand shadow-glow"
+              data-i18n="hero.badge">QA Automation Engineer · AI-Powered Testing</p>
+            <h1 class="text-4xl font-extrabold tracking-tight md:text-5xl">
+              <span data-i18n="hero.hello">Hola. Soy</span> <span
+                class="bg-gradient-to-r from-brand to-orange-300 bg-clip-text text-transparent">Adrián Suárez
+                Gómez</span>
+            </h1>
+            <p class="mt-4 max-w-xl text-zinc-300" data-i18n="hero.desc">Creo estrategias y frameworks de automatización
+              de pruebas E2E, API y móvil, enfocadas en calidad, velocidad y mantenibilidad.</p>
+            <div class="mt-6 flex flex-wrap items-center gap-3">
+              <a href="#contacts"
+                class="inline-flex items-center gap-2 rounded-md bg-brand px-5 py-2.5 font-semibold text-zinc-950 shadow-glow hover:bg-[#e0553a]"><span
+                  data-i18n="hero.cta_contact">Contáctame</span><i data-lucide="send"></i></a>
+              <a href="#projects"
+                class="inline-flex items-center gap-2 rounded-md border border-white/10 px-5 py-2.5 font-semibold text-zinc-200 hover:bg-white/5"><span
+                  data-i18n="hero.cta_projects">Ver proyectos</span><i data-lucide="arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="relative mx-auto w-72 h-72 md:w-80 md:h-80 float-slow" data-aos="fade-up" data-aos-delay="80">
+            <svg viewBox="0 0 320 320" class="absolute inset-0 h-full w-full" role="img"
+              aria-label="Foto de Adrián Suárez Gómez con máscara abstracta">
+              <defs>
+                <linearGradient id="heroStroke" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#ff6b4a" />
+                  <stop offset="100%" stop-color="#ffa37f" />
+                </linearGradient>
+                <clipPath id="blobClip">
+                  <path
+                    d="M73,35 C98,-4 158,-12 198,18 C242,51 272,116 261,165 C251,211 206,240 161,256 C117,271 71,274 43,242 C14,210 3,151 19,104 C34,59 51,44 73,35 Z" />
+                </clipPath>
+                <filter id="blobShadow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feOffset dx="0" dy="12" />
+                  <feGaussianBlur stdDeviation="12" result="blur" />
+                  <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0.35 0" />
+                </filter>
+              </defs>
+              <g transform="translate(20,20)">
+                <path
+                  d="M73,35 C98,-4 158,-12 198,18 C242,51 272,116 261,165 C251,211 206,240 161,256 C117,271 71,274 43,242 C14,210 3,151 19,104 C34,59 51,44 73,35 Z"
+                  fill="#000" filter="url(#blobShadow)" />
+                <image href="./yo.png" x="0" y="0" width="280" height="280" preserveAspectRatio="xMidYMid slice"
+                  clip-path="url(#blobClip)" />
+                <path
+                  d="M73,35 C98,-4 158,-12 198,18 C242,51 272,116 261,165 C251,211 206,240 161,256 C117,271 71,274 43,242 C14,210 3,151 19,104 C34,59 51,44 73,35 Z"
+                  fill="none" stroke="url(#heroStroke)" stroke-width="6" opacity="0.9" />
+              </g>
+            </svg>
+          </div>
         </div>
       </div>
       <div aria-label="Tecnologías" class="border-t border-white/5 bg-zinc-900/30">
         <div class="mx-auto max-w-7xl px-4 py-6">
           <div class="flex flex-wrap items-center justify-center gap-3 text-sm text-zinc-300 opacity-90">
+            <span class="rounded-md border border-brand/30 bg-brand/10 px-3 py-1 text-brand font-semibold">LLM</span>
+            <span class="rounded-md border border-brand/30 bg-brand/10 px-3 py-1 text-brand font-semibold">AI
+              Agents</span>
             <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1">Playwright</span>
             <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1">Selenium</span>
             <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1">Cypress</span>
@@ -165,104 +257,221 @@
       <div class="grid grid-cols-1 gap-10 md:grid-cols-2 md:items-start">
         <div class="space-y-6" data-aos="fade-right">
           <h2 class="text-3xl font-extrabold md:text-4xl" data-i18n="about.title">Sobre mí</h2>
-          <p class="text-zinc-600 dark:text-zinc-300" data-i18n="about.desc">Apasionado por la calidad del software y la automatización inteligente. Aporto soluciones escalables, CI/CD y buenas prácticas de ingeniería para acelerar entregas sin comprometer la fiabilidad.</p>
+          <p class="text-zinc-600 dark:text-zinc-300" data-i18n="about.desc">Apasionado por la calidad del software y la
+            automatización inteligente. Aporto soluciones escalables, CI/CD y buenas prácticas de ingeniería para
+            acelerar entregas sin comprometer la fiabilidad.</p>
           <div class="grid grid-cols-3 gap-4" aria-label="Estadísticas">
             <div class="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
               <div class="text-3xl font-extrabold text-brand"><span class="counter" data-target="50">0</span>+</div>
               <p class="mt-1 text-xs text-zinc-500 dark:text-zinc-400" data-i18n="about.stats.projects">Proyectos</p>
-      </div>
+            </div>
             <div class="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
               <div class="text-3xl font-extrabold text-brand"><span class="counter" data-target="9">0</span>+</div>
-              <p class="mt-1 text-xs text-zinc-500 dark:text-zinc-400" data-i18n="about.stats.years">Años de experiencia</p>
-    </div>
+              <p class="mt-1 text-xs text-zinc-500 dark:text-zinc-400" data-i18n="about.stats.years">Años de experiencia
+              </p>
+            </div>
             <div class="rounded-lg border border-white/10 bg-white/5 p-4 text-center">
               <div class="text-3xl font-extrabold text-brand"><span class="counter" data-target="100">0</span>%</div>
-              <p class="mt-1 text-xs text-zinc-500 dark:text-zinc-400" data-i18n="about.stats.passion">Pasión por la tecnología</p>
+              <p class="mt-1 text-xs text-zinc-500 dark:text-zinc-400" data-i18n="about.stats.passion">Pasión por la
+                tecnología</p>
             </div>
-        </div>
+          </div>
         </div>
         <div class="grid grid-cols-1 gap-4" data-aos="fade-left">
           <div class="rounded-xl border border-white/10 bg-white/5 p-4 transition-transform hover:-translate-y-1">
             <div class="flex items-center gap-3">
-              <span class="inline-flex h-10 w-10 items-center justify-center rounded-md bg-brand/15 text-brand"><i data-lucide="workflow"></i></span>
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-md bg-brand/15 text-brand"><i
+                  data-lucide="workflow"></i></span>
               <div>
                 <h3 class="font-semibold" data-i18n="services.e2e.title">Automatización de pruebas End-to-End (E2E)</h3>
-                <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400" data-i18n="services.e2e.desc">Frameworks robustos, resiliencia con auto-healing y reporte avanzado.</p>
-        </div>
-      </div>
-    </div>
+                <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400" data-i18n="services.e2e.desc">Frameworks
+                  robustos, resiliencia con auto-healing y reporte avanzado.</p>
+              </div>
+            </div>
+          </div>
           <div class="rounded-xl border border-white/10 bg-white/5 p-4 transition-transform hover:-translate-y-1">
             <div class="flex items-center gap-3">
-              <span class="inline-flex h-10 w-10 items-center justify-center rounded-md bg-brand/15 text-brand"><i data-lucide="network"></i></span>
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-md bg-brand/15 text-brand"><i
+                  data-lucide="network"></i></span>
               <div>
                 <h3 class="font-semibold" data-i18n="services.api.title">Automatización de pruebas de API</h3>
-                <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400" data-i18n="services.api.desc">Validación funcional, contratos, seguridad y performance de servicios.</p>
+                <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400" data-i18n="services.api.desc">Validación
+                  funcional, contratos, seguridad y performance de servicios.</p>
               </div>
             </div>
-        </div>
+          </div>
           <div class="rounded-xl border border-white/10 bg-white/5 p-4 transition-transform hover:-translate-y-1">
             <div class="flex items-center gap-3">
-              <span class="inline-flex h-10 w-10 items-center justify-center rounded-md bg-brand/15 text-brand"><i data-lucide="smartphone"></i></span>
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-md bg-brand/15 text-brand"><i
+                  data-lucide="smartphone"></i></span>
               <div>
                 <h3 class="font-semibold" data-i18n="services.mobile.title">Automatización de pruebas móviles</h3>
-                <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400" data-i18n="services.mobile.desc">Escenarios reales en Android e iOS con pipelines de device-farms.</p>
+                <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400" data-i18n="services.mobile.desc">Escenarios
+                  reales en Android e iOS con pipelines de device-farms.</p>
               </div>
             </div>
-        </div>
+          </div>
           <div class="rounded-xl border border-white/10 bg-white/5 p-4 transition-transform hover:-translate-y-1">
             <div class="flex items-center gap-3">
-              <span class="inline-flex h-10 w-10 items-center justify-center rounded-md bg-brand/15 text-brand"><i data-lucide="gauge"></i></span>
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-md bg-brand/15 text-brand"><i
+                  data-lucide="gauge"></i></span>
               <div>
                 <h3 class="font-semibold" data-i18n="services.performance.title">Performance Testing</h3>
-                <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400" data-i18n="services.performance.desc">Tiempos, throughput y estabilidad para entornos críticos.</p>
+                <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400" data-i18n="services.performance.desc">Tiempos,
+                  throughput y estabilidad para entornos críticos.</p>
               </div>
             </div>
-        </div>
+          </div>
           <div class="rounded-xl border border-white/10 bg-white/5 p-4 transition-transform hover:-translate-y-1">
             <div class="flex items-center gap-3">
-              <span class="inline-flex h-10 w-10 items-center justify-center rounded-md bg-brand/15 text-brand"><i data-lucide="server"></i></span>
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-md bg-brand/15 text-brand"><i
+                  data-lucide="server"></i></span>
               <div>
                 <h3 class="font-semibold" data-i18n="services.load.title">Load Testing</h3>
-                <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400" data-i18n="services.load.desc">Pruebas de carga, stress y soak con monitoreo y alertas.</p>
+                <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400" data-i18n="services.load.desc">Pruebas de
+                  carga, stress y soak con monitoreo y alertas.</p>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-white/5 p-4 transition-transform hover:-translate-y-1">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-md bg-brand/15 text-brand"><i
+                  data-lucide="cpu"></i></span>
+              <div>
+                <h3 class="font-semibold" data-i18n="services.ai.title">AI-Enhanced Testing</h3>
+                <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-400" data-i18n="services.ai.desc">Integración de
+                  LLMs y agentes de IA para automatización inteligente y auto-reparación de tests.</p>
+              </div>
+            </div>
           </div>
         </div>
-          </div>
+      </div>
+    </section>
+
+    <section id="ai-projects" class="bg-zinc-900/30 py-16 md:py-24">
+      <div class="mx-auto max-w-7xl px-4">
+        <div class="text-center" data-aos="fade-up">
+          <p
+            class="mb-3 inline-flex items-center gap-2 rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-xs font-semibold text-brand">
+            <i data-lucide="cpu" class="h-3 w-3"></i>
+            <span data-i18n="aiprojects.badge">Inteligencia Artificial</span>
+          </p>
+          <h2 class="text-3xl font-extrabold md:text-4xl" data-i18n="aiprojects.title">Proyectos con IA</h2>
+          <p class="mt-4 mx-auto max-w-2xl text-zinc-300" data-i18n="aiprojects.subtitle">Automatización inteligente
+            potenciada por LLMs y agentes de IA para llevar el testing al siguiente nivel.</p>
         </div>
-    </div>
-</section>
+        <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="ai-card p-5 transition-transform hover:-translate-y-1" data-aos="fade-up">
+            <div class="flex items-start gap-3">
+              <span
+                class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-brand/15 text-brand"><i
+                  data-lucide="wand-2"></i></span>
+              <div>
+                <h3 class="text-lg font-semibold text-brand" data-i18n="aiprojects.cards.selfhealing.title">Self-Healing
+                  Locators</h3>
+                <p class="mt-2 text-sm text-zinc-300" data-i18n="aiprojects.cards.selfhealing.desc">Sistema inteligente
+                  que detecta y repara automáticamente localizadores rotos en tests E2E usando LLM.</p>
+              </div>
+            </div>
+          </article>
+          <article class="ai-card p-5 transition-transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="60">
+            <div class="flex items-start gap-3">
+              <span
+                class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-brand/15 text-brand"><i
+                  data-lucide="clipboard-list"></i></span>
+              <div>
+                <h3 class="text-lg font-semibold text-brand" data-i18n="aiprojects.cards.testplan.title">AI Test Plan
+                  Generator</h3>
+                <p class="mt-2 text-sm text-zinc-300" data-i18n="aiprojects.cards.testplan.desc">Agente de IA que genera
+                  planes de prueba automatizados basados en requisitos y especificaciones.</p>
+              </div>
+            </div>
+          </article>
+          <article class="ai-card p-5 transition-transform hover:-translate-y-1" data-aos="fade-up"
+            data-aos-delay="120">
+            <div class="flex items-start gap-3">
+              <span
+                class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-brand/15 text-brand"><i
+                  data-lucide="file-bar-chart"></i></span>
+              <div>
+                <h3 class="text-lg font-semibold text-brand" data-i18n="aiprojects.cards.report.title">AI Report
+                  Generator</h3>
+                <p class="mt-2 text-sm text-zinc-300" data-i18n="aiprojects.cards.report.desc">Agente que analiza
+                  resultados de tests y genera informes detallados con insights automatizados.</p>
+              </div>
+            </div>
+          </article>
+          <article class="ai-card p-5 transition-transform hover:-translate-y-1" data-aos="fade-up"
+            data-aos-delay="180">
+            <div class="flex items-start gap-3">
+              <span
+                class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-brand/15 text-brand"><i
+                  data-lucide="mail"></i></span>
+              <div>
+                <h3 class="text-lg font-semibold text-brand" data-i18n="aiprojects.cards.email.title">AI Summary Email
+                  Agent</h3>
+                <p class="mt-2 text-sm text-zinc-300" data-i18n="aiprojects.cards.email.desc">Agente inteligente que
+                  envía resúmenes ejecutivos por email con insights de calidad.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <section id="projects" class="bg-zinc-900/30 py-16 md:py-24">
       <div class="mx-auto max-w-7xl px-4">
-        <h2 class="text-center text-3xl font-extrabold md:text-4xl" data-aos="fade-up" data-i18n="projects.title">Proyectos Destacados</h2>
+        <h2 class="text-center text-3xl font-extrabold md:text-4xl" data-aos="fade-up" data-i18n="projects.title">
+          Proyectos Destacados</h2>
         <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <article class="group overflow-hidden rounded-xl border border-white/10 bg-white/5 transition-transform hover:-translate-y-1" data-aos="fade-up">
+          <article
+            class="group overflow-hidden rounded-xl border border-white/10 bg-white/5 transition-transform hover:-translate-y-1"
+            data-aos="fade-up">
             <div class="p-5">
-              <h3 class="text-lg font-semibold text-brand" data-i18n="projects.cards.e2e.title">Automatización E2E (Playwright + AI)</h3>
-              <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-300" data-i18n="projects.cards.e2e.desc">Creación de proyecto E2E con Playwright y auto-healing para mayor robustez.</p>
+              <h3 class="text-lg font-semibold text-brand" data-i18n="projects.cards.e2e.title">Automatización E2E
+                (Playwright + AI)</h3>
+              <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-300" data-i18n="projects.cards.e2e.desc">Creación de
+                proyecto E2E con Playwright y auto-healing para mayor robustez.</p>
             </div>
           </article>
-          <article class="group overflow-hidden rounded-xl border border-white/10 bg-white/5 transition-transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="60">
+          <article
+            class="group overflow-hidden rounded-xl border border-white/10 bg-white/5 transition-transform hover:-translate-y-1"
+            data-aos="fade-up" data-aos-delay="60">
             <div class="p-5">
-              <h3 class="text-lg font-semibold text-brand" data-i18n="projects.cards.api.title">Automatización de pruebas API (Karate DSL)</h3>
-              <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-300" data-i18n="projects.cards.api.desc">Suite de pruebas para APIs con validaciones de contratos y performance.</p>
+              <h3 class="text-lg font-semibold text-brand" data-i18n="projects.cards.api.title">Automatización de
+                pruebas API (Karate DSL)</h3>
+              <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-300" data-i18n="projects.cards.api.desc">Suite de
+                pruebas para APIs con validaciones de contratos y performance.</p>
             </div>
           </article>
-          <article class="group overflow-hidden rounded-xl border border-white/10 bg-white/5 transition-transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="120">
+          <article
+            class="group overflow-hidden rounded-xl border border-white/10 bg-white/5 transition-transform hover:-translate-y-1"
+            data-aos="fade-up" data-aos-delay="120">
             <div class="p-5">
-              <h3 class="text-lg font-semibold text-brand" data-i18n="projects.cards.mobile.title">Pruebas Móviles con Appium</h3>
-              <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-300" data-i18n="projects.cards.mobile.desc">Ejecución de escenarios automatizados en Android e iOS.</p>
+              <h3 class="text-lg font-semibold text-brand" data-i18n="projects.cards.mobile.title">Pruebas Móviles con
+                Appium</h3>
+              <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-300" data-i18n="projects.cards.mobile.desc">Ejecución
+                de escenarios automatizados en Android e iOS.</p>
             </div>
           </article>
-          <article class="group overflow-hidden rounded-xl border border-white/10 bg-white/5 transition-transform hover:-translate-y-1" data-aos="fade-up">
+          <article
+            class="group overflow-hidden rounded-xl border border-white/10 bg-white/5 transition-transform hover:-translate-y-1"
+            data-aos="fade-up">
             <div class="p-5">
-              <h3 class="text-lg font-semibold text-brand" data-i18n="projects.cards.lib.title">Librería común para automatización</h3>
-              <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-300" data-i18n="projects.cards.lib.desc">Estandarización y reutilización para evitar duplicación de código.</p>
+              <h3 class="text-lg font-semibold text-brand" data-i18n="projects.cards.lib.title">Librería común para
+                automatización</h3>
+              <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-300" data-i18n="projects.cards.lib.desc">
+                Estandarización y reutilización para evitar duplicación de código.</p>
             </div>
           </article>
-          <article class="group overflow-hidden rounded-xl border border-white/10 bg-white/5 transition-transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="60">
+          <article
+            class="group overflow-hidden rounded-xl border border-white/10 bg-white/5 transition-transform hover:-translate-y-1"
+            data-aos="fade-up" data-aos-delay="60">
             <div class="p-5">
-              <h3 class="text-lg font-semibold text-brand" data-i18n="projects.cards.perf.title">Performance Testing con Playwright</h3>
-              <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-300" data-i18n="projects.cards.perf.desc">Batería de pruebas de rendimiento con métricas clave.</p>
+              <h3 class="text-lg font-semibold text-brand" data-i18n="projects.cards.perf.title">Performance Testing con
+                Playwright</h3>
+              <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-300" data-i18n="projects.cards.perf.desc">Batería de
+                pruebas de rendimiento con métricas clave.</p>
             </div>
           </article>
         </div>
@@ -271,17 +480,25 @@
 
     <section id="contacts" class="mx-auto max-w-7xl px-4 py-16 text-center md:py-24">
       <h2 class="text-3xl font-extrabold md:text-4xl" data-aos="zoom-in" data-i18n="contact.title">Contáctame</h2>
-      <p class="mt-3 text-zinc-600 dark:text-zinc-300" data-aos="zoom-in" data-aos-delay="60" data-i18n="contact.desc">¿Tienes alguna duda o proyecto? Escríbeme y conversemos.</p>
+      <p class="mt-3 text-zinc-600 dark:text-zinc-300" data-aos="zoom-in" data-aos-delay="60" data-i18n="contact.desc">
+        ¿Tienes alguna duda o proyecto? Escríbeme y conversemos.</p>
       <div class="mt-6 flex items-center justify-center gap-3" data-aos="zoom-in" data-aos-delay="120">
-        <a href="https://www.linkedin.com/in/adrian-suarez-gomez-59b53b30/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md border border-zinc-300 bg-white px-4 py-2 text-zinc-800 hover:bg-zinc-50 dark:border-white/10 dark:bg-white/5 dark:text-zinc-200 dark:hover:bg-white/10"><i data-lucide="linkedin"></i><span data-i18n="contact.linkedin">LinkedIn</span></a>
-        <a href="https://github.com/adrianSuarezGomez" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-md border border-zinc-300 bg-white px-4 py-2 text-zinc-800 hover:bg-zinc-50 dark:border-white/10 dark:bg-white/5 dark:text-zinc-200 dark:hover:bg-white/10"><i data-lucide="github"></i><span data-i18n="contact.github">GitHub</span></a>
-  </div>
-      <p class="mt-4 text-sm text-zinc-500 dark:text-zinc-400"><span data-i18n="contact.email">Email:</span> <a class="font-semibold text-brand hover:underline" href="mailto:adrian.suarez.gomez@gmail.com">adrian.suarez.gomez@gmail.com</a></p>
-</section>
+        <a href="https://www.linkedin.com/in/adrian-suarez-gomez-59b53b30/" target="_blank" rel="noopener"
+          class="inline-flex items-center gap-2 rounded-md border border-zinc-300 bg-white px-4 py-2 text-zinc-800 hover:bg-zinc-50 dark:border-white/10 dark:bg-white/5 dark:text-zinc-200 dark:hover:bg-white/10"><i
+            data-lucide="linkedin"></i><span data-i18n="contact.linkedin">LinkedIn</span></a>
+        <a href="https://github.com/adrianSuarezGomez" target="_blank" rel="noopener"
+          class="inline-flex items-center gap-2 rounded-md border border-zinc-300 bg-white px-4 py-2 text-zinc-800 hover:bg-zinc-50 dark:border-white/10 dark:bg-white/5 dark:text-zinc-200 dark:hover:bg-white/10"><i
+            data-lucide="github"></i><span data-i18n="contact.github">GitHub</span></a>
+      </div>
+      <p class="mt-4 text-sm text-zinc-500 dark:text-zinc-400"><span data-i18n="contact.email">Email:</span> <a
+          class="font-semibold text-brand hover:underline"
+          href="mailto:adrian.suarez.gomez@gmail.com">adrian.suarez.gomez@gmail.com</a></p>
+    </section>
   </main>
 
   <footer class="border-t border-white/10">
-    <div class="mx-auto max-w-7xl px-4 py-6 text-center text-sm text-zinc-400" data-i18n="footer.rights">© 2025 Adrián Suárez Gómez. Todos los derechos reservados.</div>
+    <div class="mx-auto max-w-7xl px-4 py-6 text-center text-sm text-zinc-400" data-i18n="footer.rights">© 2025 Adrián
+      Suárez Gómez. Todos los derechos reservados.</div>
   </footer>
 
   <script src="https://unpkg.com/i18next@22.5.1/dist/umd/i18next.min.js"></script>
@@ -325,7 +542,7 @@
         es: {
           translation: {
             nav: { home: 'Inicio', about: 'Sobre mí', projects: 'Proyectos', contact: 'Contacto' },
-            hero: { badge: 'QA Automation Engineer', hello: 'Hola. Soy', desc: 'Creo estrategias y frameworks de automatización de pruebas E2E, API y móvil, enfocadas en calidad, velocidad y mantenibilidad.', cta_contact: 'Contáctame', cta_projects: 'Ver proyectos' },
+            hero: { badge: 'QA Automation Engineer · AI-Powered Testing', hello: 'Hola. Soy', desc: 'Creo estrategias y frameworks de automatización de pruebas E2E, API y móvil, enfocadas en calidad, velocidad y mantenibilidad.', cta_contact: 'Contáctame', cta_projects: 'Ver proyectos' },
             about: {
               title: 'Sobre mí',
               desc: 'Apasionado por la calidad del software y la automatización inteligente. Aporto soluciones escalables, CI/CD y buenas prácticas de ingeniería para acelerar entregas sin comprometer la fiabilidad.',
@@ -336,7 +553,19 @@
               api: { title: 'Automatización de pruebas de API', desc: 'Validación funcional, contratos, seguridad y performance de servicios.' },
               mobile: { title: 'Automatización de pruebas móviles', desc: 'Escenarios reales en Android e iOS con pipelines de device-farms.' },
               performance: { title: 'Performance Testing', desc: 'Tiempos, throughput y estabilidad para entornos críticos.' },
-              load: { title: 'Load Testing', desc: 'Pruebas de carga, stress y soak con monitoreo y alertas.' }
+              load: { title: 'Load Testing', desc: 'Pruebas de carga, stress y soak con monitoreo y alertas.' },
+              ai: { title: 'AI-Enhanced Testing', desc: 'Integración de LLMs y agentes de IA para automatización inteligente y auto-reparación de tests.' }
+            },
+            aiprojects: {
+              badge: 'Inteligencia Artificial',
+              title: 'Proyectos con IA',
+              subtitle: 'Automatización inteligente potenciada por LLMs y agentes de IA para llevar el testing al siguiente nivel.',
+              cards: {
+                selfhealing: { title: 'Self-Healing Locators', desc: 'Sistema inteligente que detecta y repara automáticamente localizadores rotos en tests E2E usando LLM.' },
+                testplan: { title: 'AI Test Plan Generator', desc: 'Agente de IA que genera planes de prueba automatizados basados en requisitos y especificaciones.' },
+                report: { title: 'AI Report Generator', desc: 'Agente que analiza resultados de tests y genera informes detallados con insights automatizados.' },
+                email: { title: 'AI Summary Email Agent', desc: 'Agente inteligente que envía resúmenes ejecutivos por email con insights de calidad.' }
+              }
             },
             projects: {
               title: 'Proyectos Destacados',
@@ -356,7 +585,7 @@
         en: {
           translation: {
             nav: { home: 'Home', about: 'About', projects: 'Projects', contact: 'Contact' },
-            hero: { badge: 'QA Automation Engineer', hello: 'Hi. I am', desc: 'I design strategies and frameworks for E2E, API and mobile testing, focused on quality, speed, and maintainability.', cta_contact: 'Contact me', cta_projects: 'See projects' },
+            hero: { badge: 'QA Automation Engineer · AI-Powered Testing', hello: 'Hi. I am', desc: 'I design strategies and frameworks for E2E, API and mobile testing, focused on quality, speed, and maintainability.', cta_contact: 'Contact me', cta_projects: 'See projects' },
             about: {
               title: 'About me',
               desc: 'Passionate about software quality and smart automation. I bring scalable solutions, CI/CD and engineering best practices to ship faster without sacrificing reliability.',
@@ -367,7 +596,19 @@
               api: { title: 'API Test Automation', desc: 'Functional validation, contracts, security and performance of services.' },
               mobile: { title: 'Mobile Test Automation', desc: 'Real scenarios on Android and iOS with device-farm pipelines.' },
               performance: { title: 'Performance Testing', desc: 'Timings, throughput and stability for critical environments.' },
-              load: { title: 'Load Testing', desc: 'Load, stress and soak testing with monitoring and alerts.' }
+              load: { title: 'Load Testing', desc: 'Load, stress and soak testing with monitoring and alerts.' },
+              ai: { title: 'AI-Enhanced Testing', desc: 'Integration of LLMs and AI agents for intelligent automation and self-healing tests.' }
+            },
+            aiprojects: {
+              badge: 'Artificial Intelligence',
+              title: 'AI Projects',
+              subtitle: 'Intelligent automation powered by LLMs and AI agents to take testing to the next level.',
+              cards: {
+                selfhealing: { title: 'Self-Healing Locators', desc: 'Intelligent system that automatically detects and repairs broken locators in E2E tests using LLM.' },
+                testplan: { title: 'AI Test Plan Generator', desc: 'AI agent that generates automated test plans based on requirements and specifications.' },
+                report: { title: 'AI Report Generator', desc: 'Agent that analyzes test results and generates detailed reports with automated insights.' },
+                email: { title: 'AI Summary Email Agent', desc: 'Intelligent agent that sends executive summaries by email with quality insights.' }
+              }
             },
             projects: {
               title: 'Featured Projects',
@@ -415,4 +656,5 @@
     // Sin toggle de tema: siempre oscuro
   </script>
 </body>
+
 </html>
